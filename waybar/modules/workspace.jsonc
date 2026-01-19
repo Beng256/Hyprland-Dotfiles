@@ -1,0 +1,47 @@
+{
+  "hyprland/workspaces": {
+    "disable-scroll": false,
+    "active-only": false,
+    "format": "{}",
+    "sort-by-number": true
+  },
+  "hyprland/workspaces#kanji": {
+  	"disable-scroll": true,
+  	"show-special": false,
+  	"all-outputs": true,
+  	"format": "{icon}",
+    "persistent-workspaces": {
+      "*": 5
+  	},
+  	"format-icons": {
+  		"1": "一",
+  		"2": "二",
+  		"3": "三",
+  		"4": "四",
+		  "5": "五",
+	  	"6": "六",
+  		"7": "七",
+		  "8": "八",
+		  "9": "九",
+		  "10": "十"
+	  }
+  },
+  
+    "hyprland/workspaces#music": {
+	    "active-only": false,
+	    "all-outputs": true,
+	    "format": "{icon}",
+	    "on-click": "activate",
+	    "show-special": false,
+      "persistent-workspaces": {
+        "*": 5
+	    },
+	    "format-icons": {
+            "active": "󰎇",
+            "empty": "󰎍",
+            "default": "󰎋"
+	    }
+
+    }
+}
+

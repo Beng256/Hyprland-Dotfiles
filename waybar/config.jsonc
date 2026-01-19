@@ -1,0 +1,27 @@
+{
+  "layer": "bottom",
+  "exclusive": true,
+  "position": "bottom",
+  "margin": "0 15 0 15",
+  "modules-left": [
+    "clock",
+    "mpris"
+  ],
+  "modules-center": [
+    "power-profiles-daemon",
+    "hyprland/workspaces#kanji"
+  ],
+  "modules-right": [
+    "group/mobo",
+    "group/systray",
+    "custom/swaync"
+  ],
+
+  "include": [
+    "~/.config/waybar/modules/workspace.jsonc",
+    "~/.config/waybar/modules/default.jsonc",
+    "~/.config/waybar/modules/custom.jsonc",
+    "~/.config/waybar/modules/group.jsonc"
+  ]
+}
+

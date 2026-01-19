@@ -1,0 +1,24 @@
+{
+  "group/systray": {
+    "orientation": "horizontal",
+    "modules": [
+      "backlight",
+      "network",
+      "pulseaudio",
+      "battery"
+    ]
+  },
+  "group/mobo": {
+    "orientation": "inherit", 
+	  "drawer": {
+		  "transition-duration": 100,
+		  "children-class": "temperature",
+		  "transition-left-to-right": false
+    },
+    "modules": [
+      "temperature",
+      "memory"
+      //"network#speed"
+    ]
+  }
+}

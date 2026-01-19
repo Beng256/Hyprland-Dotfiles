@@ -1,0 +1,160 @@
+@import "colors/matugen.css";
+@import "colors/macchiato.css";
+
+* {
+	font-family: "SF Pro Display", "JetBrainsMono Nerd Font Propo";
+  font-weight: bold;
+  font-size: 18px;
+	font-feature-settings: '"zero", "ss01", "ss02", "ss03", "ss04", "ss05", "cv31"';
+}
+
+window#waybar,
+window#waybar.empty,
+window#waybar.empty #window {
+    background-color: transparent;
+    	border-radius: 10 10 0 0px;
+      border-top: transparent;
+}
+
+tooltip {
+	color: @inverse_surface;
+    background: rgba(0, 0, 0, 0.8);
+    border-radius: 20px;
+}
+
+tooltip label{
+	color: @inverse_surface;
+}
+/*-----module groups----*/
+.modules-right,
+.modules-center, 
+.modules-left {
+    padding: 0 0px;
+}
+/*-----modules indv----*/
+#taskbar button,
+#workspaces button {
+	color: @on_surface;
+  background: transparent;
+    box-shadow: none;
+	  text-shadow: none;
+    margin: 0 2px;
+	  padding: 0 4px;
+    border-radius: 10px;
+    animation: gradient_f 20s ease-in infinite;
+    transition: all 0.5s cubic-bezier(.55,-0.68,.48,1.682);
+}
+
+#taskbar button:hover,
+#workspaces button:hover {
+    color: @surface;
+    background: alpha(@inverse_surface, 1);
+    margin: 0 2px;
+    border: 0;
+ 	  padding-left: 6px;
+    padding-right: 6px;
+    animation: gradient_f 20s ease-in infinite;
+    transition: all 0.3s cubic-bezier(.55,-0.68,.48,1.682);
+}
+
+#taskbar button.active,
+#workspaces button.active {
+	color: @surface;
+    background-color: @inverse_surface;
+    margin: 0 2px;
+    padding-left: 8px;
+    padding-right: 8px;
+    animation: gradient_f 20s ease-in infinite;
+    transition: all 0.3s cubic-bezier(.55,-0.68,.48,1.682);
+}
+
+#workspaces button.urgent {
+    color: @on_secondary;
+    border-radius: 10px;
+}
+
+#workspaces button.persistent {
+	border-radius: 10px;
+}
+
+
+#backlight-slider,
+#bluetooth,
+#clock,
+#cpu,
+#disk,
+#idle_inhibitor,
+#keyboard-state,
+#mode,
+#mpris,
+#power-profiles-daemon,
+#pulseaudio-slider,
+#taskbar,
+#tray,
+#window,
+#wireplumber,
+#workspaces,
+#custom-swaync,
+#systray,
+#mobo {
+  background-color: @surface;
+  border-bottom: 2px solid @base;
+  color: @on_surface;
+  min-width: 25px;
+  min-height: 30px;
+  border-radius: 10px;
+  margin: 0 2 8 2px;
+	padding: 2 6px; 
+}
+
+#mobo #memory,
+#mobo #temperature,
+#systray #backlight,
+#systray #battery,
+#systray #network,
+#systray #pulseaudio {
+    color: @on_surface;
+    background-color: transparent;
+    border-bottom: none;
+    margin: 0 6px;
+    padding: 0;
+}
+
+#custom-hypridle.notactive,
+#idle_inhibitor.activated {
+	color: #39FF14;
+}
+
+#systray #pulseaudio.muted {
+	color: @red;
+}
+#mobo #temperature.critical {
+  color: @error;
+}
+
+@keyframes blink {
+	to {
+		color: #000000;
+	}
+}
+
+
+/*---battery---*/
+#systray #battery.full {
+  color: @teal;
+}
+#systray #battery.charging {
+  color: @lavender;
+}
+#systray #battery.good:not(.charging) {
+  color: @green;
+}
+#systray #battery.warning:not(.charging){
+  color: @peach;
+}
+#systray #battery.critical:not(.charging) {
+	color: red;
+}
+/*---battery---*/
+
+
