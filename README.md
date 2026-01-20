@@ -2,7 +2,7 @@
 
 ###
 
-<p align="left">Gw orang sigma</p>
+<p align="left">Sorry guys gw gak punya preview, solanya udah keburu pindah wkwk</p>
 
 ###
 
